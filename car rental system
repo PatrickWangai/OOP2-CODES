@@ -1,0 +1,46 @@
+//Java program that develops a car rental system.
+//By Patrick Wangai BSE-01-0052/2025.
+import java.util.Scanner;
+
+public class CarRental {
+    String carModel;
+    String customerName;
+    int rentalDays;
+    double dailyRate;
+    double totalCost;
+
+    // Method to input details
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter customer name: ");
+        customerName = sc.nextLine();
+
+        System.out.print("Enter car model: ");
+        carModel = sc.nextLine();
+
+        System.out.print("Enter number of rental days: ");
+        rentalDays = sc.nextInt();
+
+        System.out.print("Enter daily rate (in KES): ");
+        dailyRate = sc.nextDouble();
+
+        totalCost = rentalDays * dailyRate;
+    }
+
+    // Method to display details
+    void display() {
+        
+        System.out.println("Customer Name: " + customerName);
+        System.out.println("Car Model: " + carModel);
+        System.out.println("Rental Days: " + rentalDays);
+        System.out.println("Daily Rate: KES " + dailyRate);
+        System.out.println("Total Cost: KES " + totalCost);
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        CarRental rent = new CarRental();  // create object
+        rent.input();                      // take user input
+        rent.display();                    // show rental info
+    }
+}
