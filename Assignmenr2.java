@@ -4,7 +4,7 @@ public class PetSelector {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Choose your pet:");
+        System.out.println("Choose a Radio Button:");
         System.out.println("Radio Button 1. Bird");
         System.out.println("Radio Button 2. Cat");
         System.out.println("Radio Button 3. Dog");
